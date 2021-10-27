@@ -1,7 +1,7 @@
 .. image:: images/Hprc_banner_tamu.png
 
 
-**Announcements**
+**Aces**
 ================
 
    * **Grace Cluster Status:** Cluster deployed, currently in testing and early user access mode. 
