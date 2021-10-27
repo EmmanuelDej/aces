@@ -1,82 +1,31 @@
-.. image:: images/Hprc_banner_tamu.png
-
-
-**Aces**
+**ACES**
 ================
 
-   * **Grace Cluster Status:** Cluster deployed, currently in testing and early user access mode. 
+**ACES Quickstart Guide**
+-------------------------
+Deployed and in Friendly User Mode
 
-**Getting an Account**
-================
+**ACES Usage Policy**
+---------------------
+Access to ACES is granted with the condition that you will understand and adhere to all TAMU HPRC and ACES-specific policies.
 
-   * **Understanding HPRC:** For a brief overview of what services HPRC offers, see `this video <https://www.youtube.com/watch?v=rfqtDigwgMg&list=PLHR4HLly3i4YrkNWcUE77t8i-AkwN5AN8>`_ in our getting started series on YouTube.
+General policies can be found on the HPRC `Policies <https://hprc.tamu.edu/policies/>`_ page.
 
-   * **New to HPRC's resources?** `This page <https://hprc.tamu.edu/resources/>`_ explains the HPRC resources available to the TAMU community. Also see the `Policies Page <https://hprc.tamu.edu/policies/>`_ to better understand the rules and etiquette of cluster usage..
+**Acessing ACES**
+-----------------
+Most access to ACES is done via a secure shell session. In addition, two-factor authentication is required to login to any cluster.
 
-   * **Accessing the clusters:** All computer systems managed by the HPRC are available for use to TAMU faculty, staff, and students who require large-scale computing capabilities. The HPRC hosts the `Ada <https://hprc.tamu.edu/wiki/Ada>`_ , `Terra <https://hprc.tamu.edu/wiki/Terra>`_ , and `Grace <https://hprc.tamu.edu/wiki/Grace:Intro>`_  clusters at TAMU. To apply for or renew an HPRC account, please visit the `Account Applications <https://hprc.tamu.edu/apply/>`_  page. For information on how to obtain an allocation to run jobs on one of our clusters, please visit the `Allocations Policy <https://hprc.tamu.edu/policies/allocations.html>`_  page. *All accounts expire and must be renewed in September of each year.*
+Users on Windows computers use either PuTTY or MobaXterm. If MobaXterm works on your computer, it is usually easier to use. When starting an ssh session in PuTTY, choose the connection type 'SSH', select port 22, and then type the hostname 'aces.hprc.tamu.edu'. For MobaXterm, select 'Session', 'SSH', and then remote host 'aces.hprc.tamu.edu'. Check the box to specify username and type your NetID. After selecting 'Ok', you will be prompted for Duo Two Factor Authentication. For more detailed instructions, visit the Two Factor Authentication page.
 
-**Using The Clusters**
-================
-   * **QuickStart Guides:** For just the "need-to-know" information on getting started with our clusters, visit our QuickStart pages. Topics discussed include cluster access, file management, the batch system, setting up a software environment using modules, creating your own job files, and project account management. `Grace Quickstart Guide <https://hprc.tamu.edu/wiki/Grace:QuickStart>`_ , `Terra Quickstart Guide <https://hprc.tamu.edu/wiki/Terra:QuickStart>`_ .
+Users on Mac and Linux/Unix should use whatever SSH-capable terminal is available on their system. The command to connect to ACES is as follows. Be sure to replace [NetID] with your TAMU NetID.
 
-   * **Batch Jobs:** As a shared resource between many users, each cluster must employ a batch system to schedule a time for each user's job to run. Without such a system, one user could use a disproportionate amount of resources, and cause other users' work to stall. Ada's batch system is called LSF, and Terra's batch system is called SLURM. While similar in function, they differ in their finer details, such as job file syntax. Information relevant to each system can be found below.
-   
-   +----------------------------------------------------------+---------------------------------------------------------+ 
-   | Grace / Slurm Batch Pages                                | Terra / Slurm Batch Pages                               |
-   +==========================================================+=========================================================+ 
-   | `Complete Grace Batch Page <https://u.tamu.edu/GBatch>`_ |`Complete Terra Batch Page <https://u.tamu.edu/TBatch>`_ | 
-   +----------------------------------------------------------+---------------------------------------------------------+
-   | `Job Submission (sbatch) <https://u.tamu.edu/GSBatch>`_  |`Job Submission (sbatch) <https://u.tamu.edu/TSBatch>`_  |               
-   +----------------------------------------------------------+---------------------------------------------------------+ 
-   | `Grace Queue Structure <https://u.tamu.edu/GBQueue>`_    | `Terra Queue Structure <https://u.tamu.edu/TBQueue>`_   | 
-   +----------------------------------------------------------+---------------------------------------------------------+
-
-
-Creating your own batch jobs: the `tamubatch Page <https://hprc.tamu.edu/wiki/SW:tamubatch>`__
-provides information on how to use tamubatch to create and submit jobs
-easily.
-   
-  * **Troubleshooting:** While we cannot predict all bugs and errors, some issues on our clusters are common enough to catalog. See the `Common Problems and Quick Solutions Page <https://hprc.tamu.edu/wiki/HPRC:CommonProblems>`_ for a small collection of the most prevalent issues. For further assistance, users can contact **help@hprc.tamu.edu** to open a support ticket.
+.. code-block:: php
   
-**HPRC's YouTube Channel**
-================
-   * **Prefer visual learning?** HPRC has launched its official YouTube channel where you can find video versions of our help guides, recordings of our short courses, and more! Subscribe `here. <https://www.youtube.com/channel/UCgeDEHE5GwkxYUGS0FDLmPw?disable_polymer=true>`_ 
+  [user1@localhost ~]$ ssh [NetID]@aces.hprc.tamu.edu
 
-**Further Reading**
-================
- *  Ada User Guide
- *  Terra User Guide
- *  Grace User Guide
- *  Workstations
- *  Hardware Overview
- *  Ada Hardware
- *  Terra Hardware
- *  Grace Hardware
- *  TAMU OnDemand Portal
- *  Software Overview
- *  Loading Software
- *  Check Software License Availability
- *  Software Policies
- *  Usage Policies
- *  Account Application
- *  Manage SUs (Transfers)
- *  Contact Us
- *  Youtube Channel
-
-
-.. toctree::
-   :maxdepth: 3
-   :caption: HPRC
+.. note::
+  
+   Note: In this example [user1@localhost ~]$ represents the command prompt on your local machine. 
    
-   hprc
-   
-.. toctree::
-   :maxdepth: 3
-   :caption: User Guides
-   
-   grace
-   terra
-   ood
-   galaxy
-
-
+Your login password is the same that used on Howdy. You will not see your password as your type it into the login prompt.
+  
